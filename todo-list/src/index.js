@@ -11,15 +11,12 @@ ReactDOM.render(
       <h1>My Todos</h1>
       <p className="me">Carlos Aguirre Orozco | A01336319</p>
       <div className="addTodo">
-        <form action="/somewhere_else">
+        <form action="http://localhost:8100/tasks" method="POST"> 
           <input type="text" name="todo" required/>
           <input className="button" type="submit" value="Add" />
         </form>
       </div>
       <TodoList/>
-      <Todo id="1" name="Morning" />
-      <Todo id="1" name="Morning" />
-      <Todo id="1" name="Morning" done="true" />
     </div>
   </React.StrictMode>,
   document.getElementById("root")

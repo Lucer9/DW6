@@ -18,21 +18,20 @@ class Todo extends React.Component {
     });
   }
 
-
   render() {
     return (
       <div>
         {this.state.visible ? (
-          <div className={`todo ${this.state.done ? "done" : ""}`}>
+          <div className={`todo ${this.state.done=="done" ? "done" : ""}`}>
             <div className="text">
               <p>{this.state.name}</p>
               <div className="buttons">
-                <a onClick={() => this.setState({ done: true})} href="/"className="blue">
-                  Done
-                </a>
-                <a onClick={() => this.setState({ visible: false})} href="/"className="red">
-                  Delete
-                </a>
+                <form action={"http://localhost:8100/tasks/done/"+this.state.id} method="POST">
+                  <input type="submit" value="Done" className="blue"></input>
+                </form>
+                <form action={"http://localhost:8100/tasks/delete/"+this.state.id} method="POST">
+                  <input type="submit" value="Delete" className="red"></input>
+                </form>
               </div>
             </div>
           </div>
