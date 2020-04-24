@@ -1,0 +1,61 @@
+.todo{
+    background-color: white;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    border-radius: 5px;
+    padding: 5px 30px;
+    -webkit-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+}
+
+p{
+    margin: 10px 0;
+    font-weight: 700;
+}
+.text{
+    margin: 20px 0;
+    position: relative;
+}
+
+.buttons{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    margin: 0;
+
+}
+.buttons a{
+    margin: 0;
+    width: 50px;
+    cursor: pointer;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+
+.buttons a:hover{
+    opacity: .6;
+}
+
+.blue{
+    color: dodgerblue;
+}
+
+.red{
+    color: crimson;
+}
+
+
+
+.done{
+    background-color: rgba(0,0,0,.05);
+    color: rgba(0,0,0,.6);
+}
+
+.done .blue{
+    display: none;
+}
